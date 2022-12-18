@@ -1,9 +1,9 @@
-// Write a function called same which accepts two arrays, 
-// the function should return true if every value in the 
-// array has its corresponding value squared in the second
-// array. The frequency of the value must be the same.
+/* Write a function called same which accepts two arrays, 
+the function should return true if every value in the 
+array has its corresponding value squared in the second
+array. The frequency of the value must be the same. */
 
-function compareArrayAuare(firtsArray, secondArray){
+function compareArraySquare(firtsArray, secondArray){
     if (firtsArray.length !==  secondArray.length){
         return false
     }
@@ -34,5 +34,46 @@ function compareArrayAuare(firtsArray, secondArray){
 
 }
 
-// const v = compareArrayAuare([1,2,3], [1,4,9])
+// const v = compareArrayAuare([1,2,3], [1,4,9], "compareArraySquare")
 // console.log(v)
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/* Given two strings, write a function to determing if the first string is an anagram of the second. */
+function checkAnagram(firstString, secondString){
+
+    // if strings are not equal in length, they definitely cannot be anagrams
+    if ( firstString.length !== secondString.length){
+        return false;
+    }
+
+    // create a frequency counter object
+    const compareObject = {}
+
+    // Perform a frequency count for the first string
+    for(let i = 0; i < firstString.length; i++){
+        let letter = firstString[i];
+
+        compareObject[letter] ? compareObject[letter] += 1 : compareObject[letter] = 1;
+    }
+    console.log(compareObject)
+    // Use secondString keys to compare values on both arrays, if value is found in compareObject, subtract one from value
+    for(let i = 0; i < secondString.length; i++){
+        let letter = secondString[i];
+
+        // if value is zero after subtraction this returns false, the ! returns true, block runs.
+        if(!compareObject[letter]){
+            return false
+        }else{
+            compareObject[letter] -= 1;
+        }
+    }
+    return true;
+    console.log(compareObject)
+    
+}
+
+// console.log(checkAnagram("aba", "aab"), "CheckAnagram")
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
