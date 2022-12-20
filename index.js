@@ -75,5 +75,32 @@ function checkAnagram(firstString, secondString){
 
 // console.log(checkAnagram("aba", "aab"), "CheckAnagram")
 
-
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/* Write a fucntion call sum zero which accepts a sorted array of integers. The function should find the first pair where the sum is zero.
+Return an array that include both values that sum up to zero or undefined if the pair does not exist */
+
+function sumZero(array){
+    // Pick poniters to start sum check, which is the first and last item on the list.
+    let leftPointer = 0
+    let rightPointer = array.length - 1
+
+    // Pointer is at the center of the list if both leftpointer and rigthpointer respectively are zero
+    // check the else block.....therefore since we want to check numbers before zero(list is sorted) left should be less than right
+    while(leftPointer < rightPointer){
+        let sum = array[leftPointer] + array[rightPointer];
+
+        if(sum === 0){
+            return [array[leftPointer], array[rightPointer]]
+        }else if (sum > 0){
+            rightPointer--
+        }else{
+            leftPointer++
+        }
+    }
+    return "No sum found"
+}
+
+console.log(sumZero([-2, -1, 0 , 1, 2, 3, 4]))
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
