@@ -128,6 +128,9 @@ function countUniqueValue (array){
 // Refactor
 
 function countUniqueValueRef (array){
+
+    if (array.length === 0) return 0;
+
     let pointer = 0;
     for (j=1; j < array.length; j++){
         if(array[j] !== array[pointer]){
@@ -138,4 +141,9 @@ function countUniqueValueRef (array){
     return pointer + 1
 }
 
-console.log(countUniqueValueRef([1, 1, 1, 1, 2, 3, 4, 4, 4, 5,5]))
+// console.log(countUniqueValueRef([1, 1, 1, 1, 2, 3, 4, 4, 4, 5,5]))
+console.log(countUniqueValueRef([]))
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
