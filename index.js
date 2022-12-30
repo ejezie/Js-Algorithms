@@ -142,7 +142,7 @@ function countUniqueValueRef (array){
 }
 
 // console.log(countUniqueValueRef([1, 1, 1, 1, 2, 3, 4, 4, 4, 5,5]))
-console.log(countUniqueValueRef([]))
+// console.log(countUniqueValueRef([]))
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
