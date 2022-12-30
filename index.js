@@ -101,6 +101,28 @@ function sumZero(array){
     return "No sum found"
 }
 
-console.log(sumZero([-2, -1, 0 , 1, 2, 3, 4]))
-
+// console.log(sumZero([-2, -1, 0 , 1, 2, 3, 4]))
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/* Implement a function called count unique values, which accepts a sorted array and count the unique the vcalue in the
+sorted array. There can be negative numbers in the array, but it will always be sorted. */
+
+function countUniqueValue (array){
+    let firstPointer = 0
+    let secondPointer = 1
+
+    while (secondPointer < array.length){
+        if (array[firstPointer] !== array[secondPointer]){
+            firstPointer++
+            array[firstPointer] = array[secondPointer]
+            console.log(array[firstPointer], "lll")
+            secondPointer++
+        }else{
+            secondPointer++
+        }
+    }
+
+    return firstPointer + 1
+}
+
+console.log(countUniqueValue([1, 1, 1, 1, 2, 3]))
