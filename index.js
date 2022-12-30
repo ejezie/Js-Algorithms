@@ -115,7 +115,6 @@ function countUniqueValue (array){
         if (array[firstPointer] !== array[secondPointer]){
             firstPointer++
             array[firstPointer] = array[secondPointer]
-            console.log(array[firstPointer], "lll")
             secondPointer++
         }else{
             secondPointer++
