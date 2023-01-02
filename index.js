@@ -145,3 +145,6 @@ function countUniqueValueRef (array){
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+/* Write a function maxSubArraySum which accepts an array of integers and numbers called n. The function should calculate the 
+maximum sum of n consecutive elements in the array */
